@@ -1,0 +1,23 @@
+// Parent class
+class Person {
+  String name;
+
+  Person(this.name);
+}
+
+// Child class
+class Teacher extends Person {
+  String subject;
+
+  Teacher(String name, this.subject) : super(name);
+
+  void displayInfo() {
+    print("Teacher Name: $name");
+    print("Subject: $subject");
+  }
+}
+
+void main() {
+  Teacher t1 = Teacher("Mr. Golam", "Computer Science");
+  t1.displayInfo();
+}
