@@ -1,0 +1,33 @@
+// Abstract class
+abstract class Shape {
+  double? _area; // private property
+
+  // Abstract method
+  double area();
+
+  // Setter
+  set setArea(double value) {
+    _area = value;
+  }
+
+  // Getter
+  double get getArea => _area!;
+}
+
+// Subclass Circle
+class Circle extends Shape {
+  double radius;
+
+  Circle(this.radius);
+
+  @override
+  double area() {
+    setArea = 3.1416 * radius * radius; // store in _area
+    return getArea;
+  }
+}
+
+void main() {
+  Circle c1 = Circle(5);
+  print("Circle Area: ${c1.area()}");
+}
